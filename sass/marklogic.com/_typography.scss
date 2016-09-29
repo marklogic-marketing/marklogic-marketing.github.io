@@ -1,0 +1,155 @@
+@import "css3/border-radius";
+
+h1 {
+  color: $h1;
+  margin-top: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.lead {
+    line-height: 1.2;
+}
+
+#accordion {
+    .panel-title {
+        margin-bottom: 0;
+    }
+}
+
+img.bordered {
+  box-sizing: content-box;
+  border: 1px solid #ddd;
+  @include border-radius(1px);
+}
+
+.entry table {
+  @extend .table;
+}
+
+.entry {
+  .btn + .btn {
+    margin-left: 5px;
+  }
+}
+
+.content-social {
+  color: $text-color;
+  font-size: 2em;
+
+  &:hover {
+    text-decoration: none;
+    color: $brand-focus-dark;
+  }
+}
+
+.no-margin,
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.vcenter {
+  vertical-align: middle;
+}
+
+.vtop {
+  vertical-align: text-top;
+}
+
+.vbottom {
+  vertical-align: text-bottom;
+}
+
+// XXX these are remnants from the old grid system, as soon as the HTML
+// in content is cleaned up these can safely be removed.
+.pad.pull-right,
+.pad.pull-left,
+.more-pad.pull-right,
+.more-pad.pull-left {
+  float: none !important;
+}
+
+.cta-text {
+  font-size: 0.85em;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.text-light {
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+// Styles to make text purple
+// .text-purple         - Makes text #6068b2
+// .text-purple-dark    - Makes text a darker purple #44499c
+// .text-purple-light   - Makes text a lighter purple #6f79bd
+.text-purple {
+    color: $purple;
+}
+.text-purple-dark {
+    color: $purple-dark;
+}
+.text-purple-light {
+    color: $purple-light;
+}
+
+.text-separator {
+    display: block;
+    height: 1px;
+    border-top: 1px solid #cbcbcb;
+    padding: 0;
+    margin: 30px 0;
+    text-align: center;
+    .text {
+        font-size: 16px;
+        text-transform: uppercase;
+        background: #fff;
+        display: inline-block;
+        position: relative;
+        padding: 0 0.5em;
+        top: -12px;
+    }
+}
+
+ol.fancy-list {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 3em;
+    padding: 0;
+    counter-reset: li-counter;
+    li{
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 0.5em;
+        min-height: 3em;
+        border-left: 2px solid #CCC;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -1em;
+            width: 0.8em;
+            font-size: 3em;
+            line-height: 1;
+            font-weight: bold;
+            text-align: right;
+            color: #707bbb;
+            content: counter(li-counter);
+            counter-increment: li-counter;
+        }
+    }
+}
+
+p.desc {
+    font-size: 16px;
+    font-weight: 300;
+}

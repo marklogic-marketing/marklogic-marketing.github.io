@@ -1,0 +1,167 @@
+.btn {
+    transition: 0.25s;
+}
+
+.btn-xs {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.btn-lg {
+    padding: 8px 14px;
+    font-size: 16px;
+}
+
+.btn-dark {
+  background: $gray-dark;
+  border-color: white;
+  color: white;
+
+  &:hover {
+    color: white;
+    background: darken($gray-dark, 10%);
+  }
+}
+
+.btn-primary.btn-transparent {
+  background: rgba($brand-primary, 0.5);
+
+  &:hover {
+    background: rgba(darken($brand-primary, 10%), 0.5);
+  }
+}
+
+.btn-dark.btn-transparent {
+  background: rgba($gray-dark, 0.5);
+
+  &:hover {
+    background: rgba(darken($gray-dark, 10%), 0.5);
+  }
+}
+
+.btn.btn-green,
+.home .hero-images .hero-image-content .btn-green {
+    background: #fff;
+    color: #2e387f;
+    border: 3px solid #fff;
+    -webkit-transition: border-color 0.25s ease;
+    -moz-transition: border-color 0.25s ease;
+    -o-transition: border-color 0.25s ease;
+    -ms-transition: border-color 0.25s ease;
+    transition: border-color 0.25s ease;
+    &:hover {
+        border-color: #00b18a;
+        background: #fff;
+    }
+}
+
+.btn-multiline,
+.btn-multiline-left {
+  padding: 1.2rem 4rem;
+  line-height: 1.6rem;
+
+  strong {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1rem;
+  }
+
+  .text-muted {
+    font-weight: 200;
+    letter-spacing: 0.04em
+  }
+}
+
+.btn-multiline-left {
+  text-align:left;
+  padding-left: 1em;
+  padding-right: 2em;
+
+  p,
+  .btn-label {
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  i,
+  .icon {
+    float: left;
+    min-height: 32px;
+    min-width: 32px;
+    margin-right: 0.3em;
+    font-size: 2.1em;
+  }
+}
+
+.btn-primary {
+    .text-muted {
+      color: #d7e5f0;
+    }
+}
+
+.btn-magic {
+  @include button-variant($btn-primary-color, $east-bay, darken($east-bay, 5%));
+}
+
+.btn-magic-border {
+    background: transparent;
+    border-color: $east-bay;
+    color: $east-bay;
+    transition: 0.1s;
+    &:hover {
+        background-color: $east-bay;
+        color: #fff;
+    }
+}
+
+.btn-soft-magic {
+  @include button-variant($btn-primary-color, $soft-east-bay, darken($soft-east-bay, 5%));
+}
+
+.btn-white {
+  @include button-variant($soft-east-bay, white, #ccc);
+  border-color: #fff;
+
+  &:hover {
+    background: white;
+    color: #4e5aab;
+    border-color: #ccc;
+  }
+}
+
+.btn {
+    .glyphicon-circle-arrow-right {
+        vertical-align: middle;
+        padding: 0 0 5px 5px;
+    }
+}
+
+// not really a button, but a utility that goes into modals (specifically
+// lead gen modals) to provide a better indication of how to close out
+.close-link {
+  color: $gray-darkish;
+  text-decoration: none;
+  font-size: 1.4em;
+
+  &:hover {
+    color: $gray-dark;
+    text-decoration: none;
+  }
+
+  .glyphicon {
+    position: relative;
+    top: 4px;
+  }
+}

@@ -1,4 +1,4 @@
-# ignore node modules
+﻿# ignore node modules
 node_modules
 
 # ignore certain files
@@ -13,7 +13,6 @@ node_modules
 *.7z
 
 # ignore compiled files
-*.com
 *.class
 *.dll
 *.exe

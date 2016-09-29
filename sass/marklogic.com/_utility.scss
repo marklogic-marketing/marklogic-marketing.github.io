@@ -1,0 +1,396 @@
+@import "css3/border-radius";
+
+br.responsive { display: none;}
+
+// adds a negative bottom margin to an element so it butts up against our
+// footer. This is pretty specific to a use case, hence the util class
+.touch-footer {
+  margin-bottom: -40px;
+}
+
+.bg-gray {
+  background-color: #ddd;
+}
+
+.bg-light-gray {
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-purple {
+    background: -webkit-radial-gradient(15% 40%, $soft-east-bay, $east-bay);
+    background: -o-radial-gradient(15% 40%, $soft-east-bay, $east-bay);
+    background: -moz-radial-gradient(15% 40%, $soft-east-bay, $east-bay);
+    background: radial-gradient(at 15% 40%, $soft-east-bay, $east-bay);
+    border: 1px solid $ml-magic-2118;
+}
+
+.light-bg {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+.medium-bg {
+  background-color: rgba(0, 0, 0, 0.5) !important;;
+}
+.dark-bg {
+  background-color: rgba(0, 0, 0, 0.7) !important;;
+}
+
+.black {
+    color: #191919 !important;
+}
+
+.white {
+    color: #fff !important;
+}
+
+.green {
+    color: #2E8A5C;
+}
+
+.red {
+    color: #CC0000;
+}
+
+.no-underline {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.max-size {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.center-form_wrapper {
+        max-width: 100% !important;
+    .center-form {
+        input,
+        select,
+        textarea,
+        label {
+            margin: auto !important;
+        }
+        .gform_footer {
+            text-align: center;
+        }
+    }
+}
+
+.map {
+    display: block;
+    margin-top: 5px;
+}
+
+@media (max-width: $screen-xs-max) {
+    br.xs {display: block;}
+
+    @each $justification in $justifications {
+        .text-#{$justification}-xs {
+            text-align: #{$justification};
+        }
+    }
+
+    .width-xs-80 {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    br.xs {
+        display: block;
+    }
+
+    @each $justification in $justifications {
+        .text-#{$justification}-xs {
+            text-align: #{$justification};
+        }
+    }
+
+    .margin-gutter-xs {
+        margin-bottom: $grid-gutter-width;
+    }
+
+    @for $i from 0 through 5 {
+        .margin-#{$i}-xs {
+            margin: $i * 1em !important;
+        }
+
+        .margin-#{$i}-xs-5 {
+            margin: (($i + .5) * 1em);
+        }
+
+        @each $side in $sides {
+            .margin-#{$side}-xs-#{$i} {
+                margin-#{$side}: $i * 1em!important;
+            }
+
+            .margin-#{$side}-xs-#{$i}-5 {
+                margin-#{$side}: (($i + .5) * 1em);
+            }
+
+            .padding-#{$side}-xs-#{$i} {
+                padding-#{$side}: $i * 1em!important;
+            }
+
+            .padding-#{$side}-xs-#{$i}-5 {
+                padding-#{$side}: (($i + .5) * 1em);
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+  br.sm {display: block;}
+
+   @each $justification in $justifications {
+    .text-#{$justification}-sm {
+      text-align: #{$justification};
+    }
+  }
+
+  .margin-gutter-sm {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  @for $i from 0 through 5 {
+    .margin-#{$i}-sm {
+      margin: $i * 1em !important;
+    }
+
+    .margin-#{$i}-sm-5 {
+      margin: (($i + .5) * 1em);
+    }
+
+    @each $side in $sides {
+      .margin-#{$side}-sm-#{$i} {
+          margin-#{$side}: $i * 1em !important;
+      }
+
+      .margin-#{$side}-sm-#{$i}-5 {
+          margin-#{$side}: (($i + .5) * 1em) !important;
+      }
+
+      .padding-#{$side}-sm-#{$i} {
+        padding-#{$side}: $i * 1em !important;
+      }
+
+      .padding-#{$side}-sm-#{$i}-5 {
+        padding-#{$side}: (($i + .5) * 1em) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  br.md {display: block;}
+
+  @each $justification in $justifications {
+    .text-#{$justification}-md {
+      text-align: #{$justification};
+    }
+  }
+
+  .margin-gutter-md {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  @for $i from 0 through 4 {
+    .margin-#{$i}-md {
+      margin: $i * 1em !important;
+    }
+
+    .margin-#{$i}-md-5 {
+      margin: (($i + .5) * 1em);
+    }
+
+    @each $side in $sides {
+      .margin-#{$side}-md-#{$i} {
+          margin-#{$side}: $i * 1em!important;
+      }
+
+      .margin-#{$side}-md-#{$i}-5 {
+          margin-#{$side}: (($i + .5) * 1em);
+      }
+
+      .padding-#{$side}-md-#{$i} {
+        padding-#{$side}: $i * 1em !important;
+      }
+
+      .padding-#{$side}-md-#{$i}-5 {
+        padding-#{$side}: (($i + .5) * 1em) !important;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  br.lg {display: block;}
+
+  @each $justification in $justifications {
+    .text-#{$justification}-lg {
+      text-align: #{$justification};
+    }
+  }
+
+  .margin-gutter-lg {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  @for $i from 0 through 4 {
+    .margin-#{$i}-lg {
+      margin: $i * 1em !important;
+    }
+
+    .margin-#{$i}-lg-5 {
+      margin: (($i + .5) * 1em);
+    }
+
+    @each $side in $sides {
+      .margin-#{$side}-lg-#{$i} {
+          margin-#{$side}: $i * 1em!important;
+      }
+
+      .margin-#{$side}-lg-#{$i}-5 {
+          margin-#{$side}: (($i + .5) * 1em);
+      }
+
+      .padding-#{$side}-lg-#{$i} {
+        padding-#{$side}: $i * 1em !important;
+      }
+
+      .padding-#{$side}-lg-#{$i}-5 {
+        padding-#{$side}: (($i + .5) * 1em) !important;
+      }
+    }
+  }
+}
+
+@for $i from 0 through 5 {
+  .margin-#{$i} {
+    margin: $i * 1em !important;
+  }
+
+  .padding-#{$i} {
+    padding: $i * 1em !important;
+  }
+
+  .margin-#{$i}-5 {
+    margin: (($i + .5) * 1em);
+  }
+
+  @each $side in $sides {
+    .margin-#{$side}-#{$i} {
+        margin-#{$side}: $i * 1em!important;
+    }
+
+    .margin-#{$side}-#{$i}-5 {
+        margin-#{$side}: (($i + .5) * 1em) !important;
+    }
+
+    .padding-#{$side}-#{$i} {
+      padding-#{$side}: $i * 1em !important;
+    }
+
+    .padding-#{$side}-#{$i}-5 {
+      padding-#{$side}: (($i + .5) * 1em) !important;
+    }
+  }
+}
+
+.border-solid {
+    border: 1px solid $gray-lighter;
+}
+
+@each $side in $sides {
+  .border-#{$side}-solid {
+    border-#{$side}: 1px solid $gray-lighter;
+  }
+
+  .border-#{$side}-dotted {
+    border-#{$side}: 1px dotted $gray-lighter;
+  }
+}
+
+img.border {
+  border:1px solid $gray-lighter;
+  padding: 10px;
+}
+
+@for $i from 0 through 4{
+  .glyphicon-#{$i} {
+    font-size: $i * 1em !important;
+  }
+}
+
+.border-darker {
+    border-color: #ccc;
+}
+
+.chevron-link {
+  @extend .glyphicon;
+  @include border-radius(3px);
+  color: $gray-light;
+  border: 1px solid $gray-lightish;
+  padding: 5px;
+  font-size: $font-size-base;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: $brand-focus;
+    border-color: $brand-focus-dark;
+  }
+}
+
+.chevron-link-right {
+  @extend .glyphicon-chevron-right;
+}
+
+.row-xs-flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  .xs-flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+}
+@media (min-width: $screen-sm-min) {
+  .row-sm-flex {
+    display: flex;
+    .sm-flex {
+      display: flex;
+    }
+  }
+}
+@media (min-width: $screen-md-min) {
+  .row-md-flex {
+    display: flex;
+    .md-flex {
+      display: flex;
+    }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .row-lg-flex {
+    display: flex;
+    .lg-flex {
+      display: flex;
+    }
+  }
+
+  .visible-lg-flex {
+    display: flex;
+  }
+}

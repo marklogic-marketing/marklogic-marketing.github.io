@@ -1,6 +1,12 @@
+@import "marklogic.com/variables";
 @import "bootstrap";
 @import "font-awesome";
 
 /* TEST STYLES */
 @import "_test";
 @import "_test-2";
+
+/* MARKLOGIC.COM STYLES */
+@import "marklogic.com/typography";
+@import "marklogic.com/utility";
+@import "marklogic.com/buttons";

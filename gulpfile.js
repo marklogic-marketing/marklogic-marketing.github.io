@@ -1,3 +1,4 @@
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -11,7 +12,7 @@ gulp.task('sass', function () {
                 './bower_components/bootstrap-sass/assets/stylesheets',
                 './bower_components/font-awesome/scss'
             ],
-            outputStyle: 'nested'
+            outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./css/'));

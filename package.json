@@ -4,8 +4,9 @@
   "description": "Repository to manage Marketo styles",
   "license": "ISC",
   "devDependencies": {
-      "gulp-sass": "^2.3.*",
-      "gulp": "^3.9.*",
-      "gulp-sourcemaps": "^1.6.*"
+    "gulp": "^3.9.*",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-sass": "^2.3.*",
+    "gulp-sourcemaps": "^1.6.*"
   }
 }

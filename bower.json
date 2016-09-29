@@ -1,0 +1,22 @@
+{
+  "name": "paul-hughes.github.io",
+  "description": "Repository to manage Marketo styles",
+  "main": "",
+  "authors": [
+    "Paul-Hughes <Paul.Hughes@marklogic.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Paul-Hughes/paul-hughes.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.7",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

@@ -359,36 +359,36 @@ img.border {
 
 
 .row-xs-flex {
-  @include: display-flex;
+  @include display-flex;
   .xs-flex {
-    @include: display-flex;
+    @include display-flex;
   }
 }
 @media (min-width: $screen-sm-min) {
   .row-sm-flex {
-    @include: display-flex;
+    @include display-flex;
     .sm-flex {
-      @include: display-flex;
+      @include display-flex;
     }
   }
 }
 @media (min-width: $screen-md-min) {
   .row-md-flex {
-    @include: display-flex;
+    @include display-flex;
     .md-flex {
-      @include: display-flex;
+      @include display-flex;
     }
   }
 }
 @media (min-width: $screen-lg-min) {
   .row-lg-flex {
-    @include: display-flex;
+    @include display-flex;
     .lg-flex {
-      @include: display-flex;
+      @include display-flex;
     }
   }
 
   .visible-lg-flex {
-    @include: display-flex;
+    @include display-flex;
   }
 }

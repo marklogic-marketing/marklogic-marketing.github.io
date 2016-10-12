@@ -1,4 +1,5 @@
 @import "css3/border-radius";
+@import "css3/flex";
 
 br.responsive { display: none;}
 
@@ -354,43 +355,40 @@ img.border {
   @extend .glyphicon-chevron-right;
 }
 
+/* Paul added Flex mixin */
+
+
 .row-xs-flex {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
+  @include: display-flex;
   .xs-flex {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: flex;
+    @include: display-flex;
   }
 }
 @media (min-width: $screen-sm-min) {
   .row-sm-flex {
-    display: flex;
+    @include: display-flex;
     .sm-flex {
-      display: flex;
+      @include: display-flex;
     }
   }
 }
 @media (min-width: $screen-md-min) {
   .row-md-flex {
-    display: flex;
+    @include: display-flex;
     .md-flex {
-      display: flex;
+      @include: display-flex;
     }
   }
 }
 @media (min-width: $screen-lg-min) {
   .row-lg-flex {
-    display: flex;
+    @include: display-flex;
     .lg-flex {
-      display: flex;
+      @include: display-flex;
     }
   }
 
   .visible-lg-flex {
-    display: flex;
+    @include: display-flex;
   }
 }

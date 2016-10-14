@@ -1,5 +1,25 @@
 // This page contains code that is intended specifically to be used on the Landing Pages
 
+// Defining Landing Page background color
+body.lp-body {
+    background: #f9f9f9;
+    
+    // Pushes footer to base of page
+    .main {
+        min-height: 95vh;
+    }
+}
+
+// Logo styles
+.lp-logo {
+    position: relative;
+    left: -12px;
+    
+    @media (max-width: $screen-xs-max) {
+        left: 0;
+    }
+}
+
 // Styling intended for the bottom "sanded glass" third of follow-up resource images when viewed on mobile
 @media (max-width: $screen-xs-max) {
     .lp-mobile-resource {
@@ -30,7 +50,8 @@
     }
 }
 
-.lp-div-link {
+// Intended for anchor tags surrounding div elements. The hover state background color is removed on mobile because of the above resource styling.
+a.lp-div-link {
     color: #333;
     
     &:hover, &:focus {

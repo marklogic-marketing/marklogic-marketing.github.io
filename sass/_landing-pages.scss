@@ -7,6 +7,11 @@ body.lp-body {
     // Pushes footer to base of page
     .main {
         min-height: 95vh;
+        
+        .main-content {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
     }
 }
 

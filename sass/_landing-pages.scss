@@ -2,7 +2,7 @@
 
 // Styling intended for the bottom "sanded glass" third of follow-up resource images when viewed on mobile
 @media (max-width: $screen-xs-max) {
-    .mobile-lp-resource {
+    .lp-mobile-resource {
         position: relative;
         overflow: hidden;
         background: white;
@@ -26,6 +26,23 @@
             background: -webkit-linear-gradient(top,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(to bottom,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 3%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+        }
+    }
+}
+
+.lp-div-link {
+    color: #333;
+    
+    &:hover, &:focus {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    > div:hover {
+        background: #eee;
+        
+        @media (max-width: $screen-xs-max) {
+            background: #fff;
         }
     }
 }

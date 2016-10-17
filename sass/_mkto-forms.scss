@@ -29,3 +29,24 @@
 .mktoForm .mktoFormRow {
     margin-bottom: 15px;
 }
+
+// Make button purty
+.mktoButtonRow .mktoButtonWrap button {
+    @extend .btn;
+    @extend .btn-soft-magic;
+}
+
+// Margin on bottom
+.mktoForm form {
+    margin-bottom: 30px;
+}
+
+// Fix Radio button labels
+.mktoForm .mktoRadioList label {
+    font-weight: normal;
+}
+.mktoForm .mktoRadioList {
+    width: 100%;
+}
+
+

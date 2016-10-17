@@ -34,7 +34,7 @@
     margin-left: -15px;
     margin-right: -15px;
     
-    @media (max-width: $screen-sm-max) {
+    @media (min-width: $screen-sm-min) {
         display: flex;
         flex-direction: row;
     }
@@ -47,7 +47,7 @@
     margin-bottom: 15px !important;
     width: 100%;
     
-    @media (max-width: $screen-sm-max) {
+    @media (min-width: $screen-sm-min) {
         flex-grow: 1;
         flex-basis: 0;
     }

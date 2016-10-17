@@ -74,11 +74,19 @@
 .mktoButtonRow .mktoButtonWrap button {
     @extend .btn;
     @extend .btn-soft-magic;
+    &:after {
+        position: relative;
+        line-height: 1;
+        top: 2px;
+        margin-left: 0.5em;
+        font-family: 'Glyphicons Halflings';
+        content: "\e131" !important; 
+    }
 }
 
 // Margin on bottom
 .mktoForm form {
-    min-width: 100%;
+    width: 100% !important;
     margin-bottom: 30px;
 }
 

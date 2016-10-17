@@ -7,7 +7,8 @@
 .mktoForm .mktoFormRow .mktoFieldWrap {
     select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
         @extend .form-control;
-        min-width: 100%
+        min-width: 100%;
+        max-width: 100%;
     } 
 }
 
@@ -34,16 +35,14 @@
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    flex-direction: row; 
     
     @media (max-width: $screen-xs-max) {
         -ms-flex-direction: column;
         -webkit-box-orient: vertical;
         flex-direction: column; 
-    }
-    @media (min-width: $screen-sm-min) {
-        -ms-flex-direction: row;
-        -webkit-box-orient: horizontal;
-        flex-direction: row; 
     }
 }
 
@@ -53,17 +52,11 @@
     padding: 0 15px;
     margin-bottom: 15px !important;
     width: 100%;
+    min-width: 0;
     min-height: auto !important;
-    
-    @media (max-width: $screen-xs-max) {
-        flex-grow: 1;
-        flex-basis: 0;
-    }
-    
-    @media (min-width: $screen-sm-min) {
-        flex-grow: 1;
-        flex-basis: 0;
-    }
+    flex-grow: 1;
+    flex-basis: 0;
+
 }
 
 // Button spacing

@@ -8,7 +8,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 // Expand to full width
-.mktoForm .mktoFieldWrap, mktoForm .mktoFormCol {
+.mktoForm .mktoFieldWrap, .mktoForm .mktoFormCol {
     width: 100%;
 }
 
@@ -17,7 +17,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     display: none !important;
 }
 
-label {
+label.mktoLabel {
     margin-bottom: 5px;
 }
 

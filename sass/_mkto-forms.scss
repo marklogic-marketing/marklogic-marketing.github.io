@@ -34,13 +34,16 @@
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     
     @media (max-width: $screen-xs-max) {
         -ms-flex-direction: column;
         -webkit-box-orient: vertical;
         flex-direction: column; 
+    }
+        @media (min-width: $screen-sm-min) {
+        -ms-flex-direction: row;
+        -webkit-box-orient: horizontal;
+        flex-direction: row; 
     }
 }
 

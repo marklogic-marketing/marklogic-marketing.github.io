@@ -37,8 +37,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     
-    @media (min-width: $screen-sm-min) {
-        flex-wrap: nowrap;
+    @media (max-width: $screen-xs-max) {
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        flex-direction: column; 
     }
 }
 
@@ -48,11 +50,8 @@
     padding: 0 15px;
     margin-bottom: 15px !important;
     width: 100%;
-    
-    @media (min-width: $screen-sm-min) {
-        flex-grow: 1;
-        flex-basis: 0;
-    }
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 // Button spacing

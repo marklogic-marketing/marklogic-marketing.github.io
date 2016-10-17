@@ -2,10 +2,12 @@
 // Extends from _forms.scss
 
 
-// Apply Boostrap's form-control to relevant elements. High specificity used to override Marketo Styles
+// Apply Boostrap's form-control to relevant elements. High specificity used to override Marketo Styles. 
+// Min width prevents revealed hidden fields from collapsing
 .mktoForm .mktoFormRow .mktoFieldWrap {
     select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
-       @extend .form-control;
+        @extend .form-control;
+        min-width: 100%
     } 
 }
 
@@ -21,8 +23,10 @@
 }
 
 // Reapply Label margin
+// Min width prevents revealed hidden labels from collapsing
 .mktoForm .mktoFormRow .mktoFieldWrap label.mktoLabel {
     margin-bottom: 5px;
+    min-width: 1px;
 }
 
 // Reapply form row margin

@@ -48,8 +48,11 @@
     padding: 0 15px;
     margin-bottom: 15px !important;
     width: 100%;
-    flex-grow: 1;
-    flex-basis: 0;
+    
+    @media (min-width: $screen-sm-min) {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
 }
 
 // Button spacing

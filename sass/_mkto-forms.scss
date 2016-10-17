@@ -13,7 +13,7 @@
 
 
 // Expand to full width
-.mktoForm .mktoFieldWrap, .mktoForm .mktoFormCol {
+.mktoForm .mktoFieldWrap {
     width: 100%;
 }
 
@@ -30,8 +30,25 @@
 }
 
 // Reapply form row margin
+// Make Rows flexible
+// Make Rows akin to row divs - they remove extra side margin from the children's gutter padding
 .mktoForm .mktoFormRow {
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+// Accommodate any number of columns 
+.mktoForm .mktoFormCol {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+// Button spacing
+.mktoForm .mktoButtonRow {
+    padding: 10px 0;
 }
 
 // Make button purty
@@ -52,5 +69,4 @@
 .mktoForm .mktoRadioList {
     width: 100%;
 }
-
 

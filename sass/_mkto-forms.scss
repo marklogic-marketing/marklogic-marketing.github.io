@@ -2,10 +2,13 @@
 // Extends from _forms.scss
 
 
-// Apply Boostrap's form-control to relevant elements. 
-select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
-    @extend .form-control;
+// Apply Boostrap's form-control to relevant elements. High specificity used to override Marketo Styles
+.mktoForm .MktoFormRow .mktoFieldWrap {
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+       @extend .form-control;
+    } 
 }
+
 
 // Expand to full width
 .mktoForm .mktoFieldWrap, .mktoForm .mktoFormCol {
@@ -17,10 +20,12 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     display: none !important;
 }
 
-label.mktoLabel {
+// Reapply Label margin
+.mktoForm .mktoFormRow .mktoFieldWrap label.mktoLabel {
     margin-bottom: 5px;
 }
 
+// Reapply form row margin
 .mktoForm .mktoFormRow {
     margin-bottom: 15px;
 }

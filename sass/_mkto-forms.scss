@@ -28,20 +28,23 @@
     min-width: 1px;
 }
 
-// Reapply form row margin
-// Make Rows flexible
 // Make Rows akin to row divs - they remove extra side margin from the children's gutter padding
+// Make Rows flexible
 .mktoForm .mktoFormRow {
-    display: flex;
-    flex-direction: row;
     margin-left: -15px;
     margin-right: -15px;
+    
+    @media (max-width: $screen-sm-max) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
+// Reapply form row margin, add column gutters
 // Accommodate any number of columns 
 .mktoForm .mktoFormCol {
     padding: 0 15px;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
     width: 100%;
     
     @media (max-width: $screen-sm-max) {

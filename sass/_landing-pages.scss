@@ -86,9 +86,9 @@ body.lp-body {
                 
                 // Small Shadow 
                 background: white;
-                background: -moz-linear-gradient( top white 95%, #aaa 100% ), linear-gradient( left, white 0%, #aaa 5%, #aaa 95%, white 100% );
-                background: -webkit-linear-gradient( top white 95%, #aaa 100% ), linear-gradient( left, white 0%, #aaa 5%, #aaa 95%, white 100% );
-                background:	linear-gradient( to bottom white 95%, #aaa 100% ), linear-gradient( to right, white 0%, #aaa 5%, #aaa 95%, white 100% );
+                background: -moz-linear-gradient( top, white 95%, #aaa 100% ), linear-gradient( left, white 0%, #aaa 5%, #aaa 95%, white 100% );
+                background: -webkit-linear-gradient( top, white 95%, #aaa 100% ), linear-gradient( left, white 0%, #aaa 5%, #aaa 95%, white 100% );
+                background:	linear-gradient( to bottom, white 95%, #aaa 100% ), linear-gradient( to right, white 0%, #aaa 5%, #aaa 95%, white 100% );
                 background-blend-mode: screen;
             }
         }

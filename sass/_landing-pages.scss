@@ -63,12 +63,14 @@ body.lp-body {
 }
 // Styles triggerable by Marketo user. Tilts image on large screens, tucks image behind panel - with gradient shadows - on mobile screens
 .lp-asset-boolean {
-    transform: rotate(-2deg);
-    left: -5px;
+    .lp-asset img img {
+        transform: rotate(-2deg);
+        left: -5px;
+    }
     
     @media (max-width: $screen-xs-max) {
         
-        .mobile-height-contraint {
+        .mobile-height-constraint {
             // Mixin located in _relative-height.scss
             @include relative-height ( 2, 3 );
             > div {

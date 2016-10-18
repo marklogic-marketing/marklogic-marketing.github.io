@@ -48,15 +48,55 @@ body.lp-body {
         height: auto;
         z-index: 1;
         display: block;
-    }
-    .default-asset-img {
         position: absolute;
         transform-origin: top-right;
         -webkit-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
         -moz-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
         box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45);
+    } 
+    @media (max-width: $screen-xs-max) {
+        margin-right: 0px;
+        img {
+            position: relative;
+        }
     }
+}
+// Styles triggerable by Marketo user. Tilts image on large screens, tucks image behind panel - with gradient shadows - on mobile screens
+.lp-asset-boolean {
+    transform: rotate(-2deg);
+    left: -5px;
     
+    @media (max-width: $screen-xs-max) {
+        
+        .mobile-height-contraint {
+            // Mixin located in _relative-height.scss
+            @include relative-height ( 2, 3 );
+            > div {
+                @include relative-height-child;
+                
+                // Gradient border
+                border: 1px solid transparent;
+ 			    border-width: 0 0 1px 0;
+                -moz-border-image: -moz-linear-gradient( left, white 0%, #ccc 5%, #ccc 95%, white 100% );
+                -webkit-border-image: -webkit-linear-gradient( left, white 0%, #ccc 5%, #ccc 95%, white 100% );
+                border-image: linear-gradient( to right, white 0%, #ccc 5%, #ccc 95%, white 100% );
+                border-image-slice: 1;
+                
+                // Small Shadow 
+                background: white;
+                background: -moz-linear-gradient( white 95%, #aaa 100% ), linear-gradient( top, white 0%, #aaa 5%, #aaa 95%, white 100% );
+                background: -webkit-linear-gradient( white 95%, #aaa 100% ), linear-gradient( top, white 0%, #aaa 5%, #aaa 95%, white 100% );
+                background:	linear-gradient( white 95%, #aaa 100% ), linear-gradient( to bottom, white 0%, #aaa 5%, #aaa 95%, white 100% );
+                background-blend-mode: screen;
+            }
+        }
+        
+        // Spacing the image within the frame - centered and adjusted down because of the hidden overlay
+        .lp-asset-img img {
+            width: 85%;
+            margin: 1.8% auto 0 auto;
+        }
+    }
 }
 
 // Styling intended for the bottom "sanded glass" third of follow-up resource images when viewed on mobile

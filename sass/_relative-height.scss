@@ -7,18 +7,22 @@ $heights: 1, 2, 3, 4, 16;
 $widths: 1, 2, 3, 9;
 
 // Divides height by width to generate padding-top for each ratio. For example, a ratio of 2:1 will generate a padding-top of 50%
+@mixin relative-height ($h, $w) {
+  position: relative;
+  width: 100%;
+  padding-top: $h / $w * 100%;
+}
 @each $width in $widths {
-    @each $height in $heights {
-        div.relative-height-#{$height}-#{$width} {
-            position: relative;
-            width: 100%;
-            padding-top: #{$width/$height*100%};
-        }
+  @each $height in $heights {
+    div.relative-height-#{$width}-#{$height} {
+      @include relative-height ($height, $width);
     }
+  }
 }
 
 // Makes direct children divs absolutely positioned to fit the space defined by the padding-top
-div[class^="relative-height-"] > div {
+
+@mixin relative-height-child {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -27,4 +31,8 @@ div[class^="relative-height-"] > div {
     bottom: 0;
     left: 0;
     overflow: hidden;
+}
+
+div[class^="relative-height-"] > div {
+    @include relative-height-child;
 }

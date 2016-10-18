@@ -31,19 +31,24 @@ body.lp-body {
         margin-bottom: 15px;
     }
 }
+.footer .text-muted a {
+    color: #777777;
+    &:hover {
+        color: #666666;
+        text-decoration: underline;
+    }
+}
 
 // Landing page asset image styling {
 .lp-asset-img {
     position: relative;
     margin-right: 30px;
-    
     img {
         width:100%;
         height: auto;
         z-index: 1;
         display: block;
     }
-    
     .default-asset-img {
         position: absolute;
         transform-origin: top-right;

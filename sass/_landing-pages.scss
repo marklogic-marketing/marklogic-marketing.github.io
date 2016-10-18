@@ -15,14 +15,43 @@ body.lp-body {
     }
 }
 
-// Logo styles
+// Logo and heading styles
 .lp-logo {
     position: relative;
-    left: -12px;
+    left: -17px;
     
     @media (max-width: $screen-xs-max) {
         left: 0;
     }
+}
+.lp-header {
+    margin-top: 15px;
+    margin-bottom: 75px;
+    @media (max-width: $screen-xs-max) {
+        margin-bottom: 15px;
+    }
+}
+
+// Landing page asset image styling {
+.lp-asset-img {
+    position: relative;
+    margin-right: 30px;
+    
+    img {
+        width:100%;
+        height: auto;
+        z-index: 1;
+        display: block;
+    }
+    
+    .default-asset-img {
+        position: absolute;
+        transform-origin: top-right;
+        -webkit-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
+        -moz-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
+        box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45);
+    }
+    
 }
 
 // Styling intended for the bottom "sanded glass" third of follow-up resource images when viewed on mobile

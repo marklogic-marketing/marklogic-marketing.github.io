@@ -3,8 +3,8 @@ This responds responsively.
 It is used to set the blurred mobile image styles in Marketo landing pages, and for embedding YouTube videos & Google Maps */
 
 // Desired Possible Ratio values for heights / widths 
-$heights: 1, 2, 3, 4, 16;
-$widths: 1, 2, 3, 9;
+$heights: 1, 2, 3, 9;
+$widths: 1, 2, 3, 4, 16;
 
 // Divides height by width to generate padding-top for each ratio. For example, a ratio of 2:1 will generate a padding-top of 50%
 @mixin relative-height ($h, $w) {

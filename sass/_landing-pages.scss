@@ -46,13 +46,10 @@ body.lp-body {
     -moz-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
     box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45);
 }
+// Helps smooth some browser image resizing
 img {
-    image-rendering:-moz-crisp-edges;          /* Firefox        */
-	image-rendering:-o-crisp-edges;            /* Opera          */
 	image-rendering:-webkit-optimize-contrast; /* Safari         */
 	image-rendering:optimize-contrast;         /* CSS3 Proposed  */
-	image-rendering:crisp-edges;               /* CSS4 Proposed  */
-	-ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }
 .lp-asset-img {
     position: relative;

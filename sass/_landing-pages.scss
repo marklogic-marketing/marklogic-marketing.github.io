@@ -112,6 +112,9 @@ img.lp-3-asset-img {
 	image-rendering:crisp-edges;               /* CSS4 Proposed  */
 	-ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }
+img.lp-video-img img {
+    border: 8px solid white;
+}
 img.lp-ty-img {
     position: relative;
     transform: rotate(4deg);

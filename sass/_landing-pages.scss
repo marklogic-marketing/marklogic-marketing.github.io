@@ -40,6 +40,12 @@ body.lp-body {
 }
 
 // Landing page asset image styling {
+@mixin lp-img-shadow {
+    transform-origin: top-right;
+    -webkit-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
+    -moz-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
+    box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45);
+}
 .lp-asset-img {
     position: relative;
     margin-right: 30px;
@@ -49,10 +55,7 @@ body.lp-body {
         z-index: 1;
         display: block;
         position: absolute;
-        transform-origin: top-right;
-        -webkit-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
-        -moz-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45); 
-        box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.45);
+        @include lp-img-shadow
     } 
     @media (max-width: $screen-xs-max) {
         margin-right: 0px;
@@ -99,6 +102,12 @@ body.lp-body {
             margin: 2.5% auto 0 auto;
         }
     }
+}
+img.lp-ty-img {
+    position: relative;
+    transform: rotate(4deg);
+    max-width: 220px;
+    @include lp-img-shadow;
 }
 
 // Styling intended for the bottom "sanded glass" third of follow-up resource images when viewed on mobile

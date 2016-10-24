@@ -69,6 +69,8 @@ body.lp-body {
     .lp-asset-img img {
         transform: rotate(-2deg);
         left: -5px;
+        -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+   	    backface-visibility: hidden;
     }
     
     @media (max-width: $screen-xs-max) {
@@ -115,6 +117,8 @@ img.lp-ty-img {
     transform: rotate(4deg);
     max-width: 220px;
     @include lp-img-shadow;
+    -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+   	backface-visibility: hidden;
 }
 
 // Styling intended for the bottom "sanded glass" third of follow-up resource images when viewed on mobile

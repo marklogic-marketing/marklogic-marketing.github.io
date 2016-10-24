@@ -55,7 +55,7 @@ body.lp-body {
 .lp-asset-img {
     position: relative;
     margin-right: 30px;
-    img {
+    .lp-img-wrap {
         width:100%;
         height: auto;
         z-index: 1;
@@ -65,14 +65,14 @@ body.lp-body {
     } 
     @media (max-width: $screen-xs-max) {
         margin-right: 0px;
-        img {
+        .lp-img-wrap {
             position: relative;
         }
     }
 }
 // Styles triggerable by Marketo user. Tilts image on large screens, tucks image behind panel - with gradient shadows - on mobile screens
 .lp-asset-boolean {
-    .lp-asset-img img {
+    .lp-asset-img .lp-img-wrap {
         @include rotate-img(-2);
         left: -5px;
     }
@@ -103,17 +103,17 @@ body.lp-body {
         }
         
         // Spacing the image within the frame - centered and adjusted down because of the hidden overlay
-        .lp-asset-img img {
+        .lp-asset-img .lp-img-wrap {
             width: 85%;
             margin: 3% auto 0 auto;
         }
     }
 }
-img.lp-3-asset-img {
+div.lp-3-asset-img {
     box-shadow: none !important;
     transform: none !important;
 }
-.lp-video-img img {
+.lp-video-img .lp-img-wrap {
     border: 8px solid white;
 }
 img.lp-ty-img {

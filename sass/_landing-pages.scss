@@ -61,8 +61,10 @@ body.lp-body {
         z-index: 1;
         display: block;
         position: absolute;
-        @include lp-img-shadow;
         padding: 2px;
+        img {
+            @include lp-img-shadow;
+        }
     } 
     @media (max-width: $screen-xs-max) {
         margin-right: 0px;
@@ -110,11 +112,11 @@ body.lp-body {
         }
     }
 }
-div.lp-3-asset-img {
+img.lp-3-asset-img {
     box-shadow: none !important;
     transform: none !important;
 }
-.lp-video-img .lp-img-wrap {
+.lp-video-img .lp-img-wrap img {
     border: 8px solid white;
 }
 img.lp-ty-img {

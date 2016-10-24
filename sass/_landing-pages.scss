@@ -114,8 +114,10 @@ img.lp-3-asset-img {
     transform: none !important;
 }
 .lp-video-img img {
-    margin-top: 15px; 
     border: 8px solid white;
+    @media (max-width: $screen-xs-max) {
+        margin-top: 15px;
+    }
 }
 img.lp-ty-img {
     position: relative;

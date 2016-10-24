@@ -43,7 +43,7 @@
     -ms-flex-direction: row;
     -webkit-box-orient: horizontal;
     flex-direction: row; 
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
         -ms-flex-direction: column;
         -webkit-box-orient: vertical;
         flex-direction: column; 

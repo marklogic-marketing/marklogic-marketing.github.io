@@ -107,3 +107,8 @@
 .mktoForm .mktoRadioList {
     width: 100%;
 }
+
+// Hide unnecessary space
+.mktoForm .mktoPlaceholder {
+    display: none;
+}

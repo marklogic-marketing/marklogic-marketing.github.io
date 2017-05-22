@@ -8,6 +8,12 @@
   // Fix Extra padding
   padding: 0 !important;
   
+  // Margin on bottom & Holding Form open to 100%
+  form {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+    
   // Hide Unnecessary elements
   .mktoGutter, .mktoAsterix, .mktoOffset {
     display: none !important;
@@ -43,11 +49,9 @@
       padding: 0 15px;
       margin-bottom: 15px !important;
       min-width: 0;
-      // Prevents columns from collapsing
-      min-height: 60px !important;
       width: 100%;
       flex-grow: 1;
-      flex-basis: 0;
+      flex-basis: auto;
     }
     
     .mktoFieldWrap {
@@ -95,12 +99,6 @@
         }
       }
     }
-  }
-  
-  // Margin on bottom
-  form {
-    width: 100% !important;
-    margin-bottom: 30px;
   }
   
   // Hide unnecessary space

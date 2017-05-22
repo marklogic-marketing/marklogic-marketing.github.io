@@ -78,6 +78,11 @@
       }
     } 
   }
+        
+  // Set Rich Text Elements to 100% width
+  .mktoHtmlText.mktoHasWidth {
+    width: 100% !important;
+  }
   
   // Button spacing
   .mktoButtonRow {

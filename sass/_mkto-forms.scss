@@ -68,13 +68,25 @@
         min-width: 1px;
       }
       
-      // Apply Boostrap's form-control to relevant elements. High specificity used to override Marketo Styles. 
+      // Apply Bootstrap's form-control to relevant elements. High specificity used to override Marketo Styles. 
       // Min width prevents revealed hidden fields from collapsing
       // Max width prevents flex from increasing column width beyond its parent - weird bug consistently occurs without it
       select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
         @extend .form-control;
         min-width: 100%;
         max-width: 100%;
+      }
+        
+      // Specific styles for checklists
+      div.mktoCheckbox, div.mktoCheckboxList {
+        width: 100% !important;
+          label {
+              font-weight: normal;
+              line-height: 20px;
+              font-size: 14px;
+              margin-top: -3px;
+              margin-bottom: -5px;
+          }
       }
     } 
   }
@@ -92,16 +104,7 @@
         
       // Make button purty
       button {
-        @extend .btn;
-        @extend .btn-soft-magic;
-        &:after {
-          position: relative;
-          line-height: 1;
-          top: 2px;
-          margin-left: 0.5em;
-          font-family: 'Glyphicons Halflings';
-          content: "\e131" !important; 
-        }
+        @extend .btn-red;
       }
     }
   }
